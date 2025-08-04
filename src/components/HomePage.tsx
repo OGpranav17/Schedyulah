@@ -39,7 +39,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
                 <Clock className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
-                FlowTime
+                Schedyulah
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
@@ -60,9 +60,9 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
       <section className="pt-24 pb-16 px-6 sm:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Transform Your
+            Transform Your{' '}
             <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-mint-500 bg-clip-text text-transparent">
-              {' '}Productivity
+              Productivity
             </span>
           </h1>
           <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -222,7 +222,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                  <p className="text-gray-600">hello@flowtime.app</p>
+                  <p className="text-gray-600">hello@schedyulah.app</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
@@ -256,7 +256,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
               <div className="w-8 h-8 bg-gradient-to-r from-pink-400 to-purple-500 rounded-lg flex items-center justify-center">
                 <Clock className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold">FlowTime</span>
+              <span className="text-xl font-bold">Schedyulah</span>
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="hover:text-pink-400 transition-colors">Privacy</a>
@@ -265,7 +265,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
-            <p>&copy; 2025 FlowTime. Made with ❤️ for productive people.</p>
+            <p>&copy; 2025 Schedyulah. Made with ❤️ for productive people.</p>
           </div>
         </div>
       </footer>
