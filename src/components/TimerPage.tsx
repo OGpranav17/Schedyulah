@@ -2,6 +2,45 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Play, Pause, Square, Home, BarChart3, Clock } from 'lucide-react';
 import { TimerSession, TimerState } from '../types/timer';
 
+const MotivationalQuotes: React.FC = () => {
+  const quotes = [
+    "Great job! Every minute of focus brings you closer to your goals. 🌟",
+    "You're building amazing habits! Keep up the fantastic work! 💪",
+    "Focus is your superpower. You just proved it! ✨",
+    "Another productive session complete! You're unstoppable! 🚀",
+    "Excellence is a habit, and you're mastering it! 🏆",
+    "Your dedication is inspiring! Time well spent! 🌈",
+    "Progress over perfection - and you're making great progress! 📈",
+    "You turned time into achievement. That's pure magic! ⭐",
+    "Consistency is key, and you're showing up! Amazing! 🔥",
+    "Your future self is thanking you for this focused time! 💫"
+  ];
+
+  const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible(false);
+      
+      setTimeout(() => {
+        setCurrentQuoteIndex((prev) => (prev + 1) % quotes.length);
+        setIsVisible(true);
+      }, 300); // Half second for fade out, then fade in
+    }, 5000); // Change every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [quotes.length]);
+
+  return (
+    <p className={`text-lg text-gray-600 mb-8 italic transition-opacity duration-300 ${
+      isVisible ? 'opacity-100' : 'opacity-0'
+    }`}>
+      "{quotes[currentQuoteIndex]}"
+    </p>
+  );
+};
+
 interface TimerPageProps {
   activity: string;
   onAddSession: (session: TimerSession) => void;
@@ -27,19 +66,6 @@ const TimerPage: React.FC<TimerPageProps> = ({ activity, onAddSession, onNavigat
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const totalTimeIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const pauseStartTime = useRef<number | null>(null);
-
-  const motivationalQuotes = [
-    "Great job! Every minute of focus brings you closer to your goals. 🌟",
-    "You're building amazing habits! Keep up the fantastic work! 💪",
-    "Focus is your superpower. You just proved it! ✨",
-    "Another productive session complete! You're unstoppable! 🚀",
-    "Excellence is a habit, and you're mastering it! 🏆",
-    "Your dedication is inspiring! Time well spent! 🌈",
-    "Progress over perfection - and you're making great progress! 📈",
-    "You turned time into achievement. That's pure magic! ⭐",
-    "Consistency is key, and you're showing up! Amazing! 🔥",
-    "Your future self is thanking you for this focused time! 💫"
-  ];
 
   // Always update current time for total session calculation
   useEffect(() => {
@@ -189,7 +215,6 @@ const TimerPage: React.FC<TimerPageProps> = ({ activity, onAddSession, onNavigat
   };
 
   const totalSessionTime = sessionStartTime ? currentTime - sessionStartTime : 0;
-  const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -313,7 +338,7 @@ const TimerPage: React.FC<TimerPageProps> = ({ activity, onAddSession, onNavigat
                   <span className="text-3xl">🎉</span>
                 </div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-4">Session Complete!</h2>
-                <p className="text-lg text-gray-600 mb-8 italic">"{randomQuote}"</p>
+                <MotivationalQuotes />
               </div>
 
               {sessionStats && (

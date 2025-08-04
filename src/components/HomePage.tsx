@@ -44,7 +44,6 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#features" className="text-gray-600 hover:text-pink-600 transition-colors">Features</a>
-              <a href="#testimonials" className="text-gray-600 hover:text-pink-600 transition-colors">Reviews</a>
               <a href="#contact" className="text-gray-600 hover:text-pink-600 transition-colors">Contact</a>
               <button
                 onClick={() => onNavigate('dashboard')}
@@ -148,85 +147,6 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
               <p className="text-gray-600 leading-relaxed">
                 Organize your time by different activities. Perfect for students, professionals, and creatives.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 px-6 sm:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Loved by productive people
-            </h2>
-            <p className="text-xl text-gray-600">
-              See what students and professionals say about FlowTime
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-              <div className="flex mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-600 mb-6 italic">
-                "FlowTime transformed how I study. The beautiful interface keeps me motivated, 
-                and the analytics help me understand my productivity patterns."
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full flex items-center justify-center text-white font-semibold">
-                  S
-                </div>
-                <div className="ml-4">
-                  <p className="font-semibold text-gray-900">Sarah Chen</p>
-                  <p className="text-sm text-gray-500">Computer Science Student</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-              <div className="flex mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-600 mb-6 italic">
-                "Perfect for tracking my creative projects. The design is so aesthetic and 
-                Pinterest-worthy - it actually makes me want to be productive!"
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full flex items-center justify-center text-white font-semibold">
-                  M
-                </div>
-                <div className="ml-4">
-                  <p className="font-semibold text-gray-900">Maya Rodriguez</p>
-                  <p className="text-sm text-gray-500">Graphic Designer</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-              <div className="flex mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-gray-600 mb-6 italic">
-                "Simple, beautiful, and effective. I love how it calculates both active 
-                and total time - gives me a complete picture of my productivity."
-              </p>
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-to-r from-mint-400 to-emerald-400 rounded-full flex items-center justify-center text-white font-semibold">
-                  A
-                </div>
-                <div className="ml-4">
-                  <p className="font-semibold text-gray-900">Alex Thompson</p>
-                  <p className="text-sm text-gray-500">PhD Candidate</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
