@@ -221,11 +221,8 @@ const TimerPage: React.FC<TimerPageProps> = ({ activity, onAddSession, onNavigat
       {/* Navigation */}
       <nav className="bg-white/80 backdrop-blur-md border-b border-pink-100 px-6 py-4">
         <div className="max-w-4xl mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-pink-400 to-purple-500 rounded-lg flex items-center justify-center">
-              <Clock className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+          <div className="flex items-center">
+            <span className="text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-mint-500 bg-clip-text text-transparent tracking-wide transform transition-all duration-300 hover:scale-110 cursor-pointer" style={{ fontFamily: 'Brush Script MT, cursive' }}>
               Schedyulah
             </span>
           </div>

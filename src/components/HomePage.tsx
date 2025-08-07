@@ -34,11 +34,8 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-pink-100">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-pink-400 to-purple-500 rounded-lg flex items-center justify-center">
-                <Clock className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+            <div className="flex items-center">
+              <span className="text-3xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-mint-500 bg-clip-text text-transparent tracking-wide transform transition-all duration-300 hover:scale-110 cursor-pointer" style={{ fontFamily: 'Brush Script MT, cursive' }}>
                 Schedyulah
               </span>
             </div>
@@ -252,11 +249,10 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
       <footer className="bg-gray-900 text-white py-12 px-6 sm:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gradient-to-r from-pink-400 to-purple-500 rounded-lg flex items-center justify-center">
-                <Clock className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold">Schedyulah</span>
+            <div className="flex items-center mb-4 md:mb-0">
+              <span className="text-2xl font-bold bg-gradient-to-r from-pink-400 via-purple-400 to-mint-400 bg-clip-text text-transparent tracking-wide transform transition-all duration-300 hover:scale-110 cursor-pointer" style={{ fontFamily: 'Brush Script MT, cursive' }}>
+                Schedyulah
+              </span>
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="hover:text-pink-400 transition-colors">Privacy</a>
