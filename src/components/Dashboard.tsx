@@ -57,24 +57,24 @@ const Dashboard: React.FC<DashboardProps> = ({ sessions, onNavigate }) => {
     .slice(0, 10);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-mint-50">
+    <div className="min-h-screen bg-gradient-to-b from-wine-900 via-burgundy-600 to-rose-300">
       {/* Navigation */}
-      <nav className="bg-white/80 backdrop-blur-md border-b border-pink-100 px-6 py-4">
+      <nav className="bg-white/90 backdrop-blur-md border-b border-rose-200 px-6 py-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center">
-            <span className="text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-mint-500 bg-clip-text text-transparent tracking-wide transform transition-all duration-300 hover:scale-110 cursor-pointer" style={{ fontFamily: 'Brush Script MT, cursive' }}>
+            <span className="text-2xl font-bold bg-gradient-to-r from-wine-800 via-burgundy-600 to-rose-500 bg-clip-text text-transparent tracking-wide transform transition-all duration-300 hover:scale-110 cursor-pointer" style={{ fontFamily: 'Brush Script MT, cursive' }}>
               Schedyulah
             </span>
           </div>
           <div className="flex items-center space-x-4">
             <button
               onClick={() => onNavigate('home')}
-              className="flex items-center space-x-2 text-gray-600 hover:text-pink-600 transition-colors"
+              className="flex items-center space-x-2 text-gray-700 hover:text-wine-700 transition-colors"
             >
               <Home className="w-5 h-5" />
               <span className="hidden sm:inline">Home</span>
             </button>
-            <div className="flex items-center space-x-2 text-pink-600">
+            <div className="flex items-center space-x-2 text-wine-700">
               <BarChart3 className="w-5 h-5" />
               <span className="hidden sm:inline font-medium">Dashboard</span>
             </div>
@@ -95,7 +95,7 @@ const Dashboard: React.FC<DashboardProps> = ({ sessions, onNavigate }) => {
 
         {sessions.length === 0 ? (
           <div className="text-center py-16">
-            <div className="w-24 h-24 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="w-24 h-24 bg-gradient-to-r from-wine-600 to-burgundy-500 rounded-full flex items-center justify-center mx-auto mb-6">
               <BarChart3 className="w-12 h-12 text-white" />
             </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">No sessions yet</h2>
@@ -104,7 +104,7 @@ const Dashboard: React.FC<DashboardProps> = ({ sessions, onNavigate }) => {
             </p>
             <button
               onClick={() => onNavigate('home')}
-              className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-3 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-r from-wine-700 to-burgundy-600 text-white px-8 py-3 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               Start Your First Session
             </button>
@@ -113,9 +113,9 @@ const Dashboard: React.FC<DashboardProps> = ({ sessions, onNavigate }) => {
           <>
             {/* Stats Overview */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-pink-100">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-rose-200">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-pink-400 to-rose-400 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-gradient-to-r from-wine-600 to-burgundy-500 rounded-lg flex items-center justify-center">
                     <Clock className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -125,9 +125,9 @@ const Dashboard: React.FC<DashboardProps> = ({ sessions, onNavigate }) => {
                 </div>
               </div>
 
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-purple-100">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-rose-200">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-gradient-to-r from-burgundy-600 to-rose-500 rounded-lg flex items-center justify-center">
                     <Calendar className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -137,9 +137,9 @@ const Dashboard: React.FC<DashboardProps> = ({ sessions, onNavigate }) => {
                 </div>
               </div>
 
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-mint-100">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-rose-200">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-mint-400 to-emerald-400 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-gradient-to-r from-rose-500 to-rose-400 rounded-lg flex items-center justify-center">
                     <TrendingUp className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -149,9 +149,9 @@ const Dashboard: React.FC<DashboardProps> = ({ sessions, onNavigate }) => {
                 </div>
               </div>
 
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-yellow-100">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-rose-200">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-gradient-to-r from-burgundy-500 to-wine-500 rounded-lg flex items-center justify-center">
                     <Activity className="w-5 h-5 text-white" />
                   </div>
                   <div>
@@ -164,16 +164,16 @@ const Dashboard: React.FC<DashboardProps> = ({ sessions, onNavigate }) => {
 
             <div className="grid lg:grid-cols-2 gap-8">
               {/* Top Activities */}
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-gray-100">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-rose-200">
                 <h2 className="text-xl font-bold text-gray-900 mb-6">Top Activities</h2>
                 <div className="space-y-4">
                   {topActivities.map((activity, index) => (
                     <div key={activity.name} className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
                         <div className={`w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-semibold ${
-                          index === 0 ? 'bg-gradient-to-r from-pink-400 to-rose-400' :
-                          index === 1 ? 'bg-gradient-to-r from-purple-400 to-indigo-400' :
-                          index === 2 ? 'bg-gradient-to-r from-mint-400 to-emerald-400' :
+                          index === 0 ? 'bg-gradient-to-r from-wine-600 to-burgundy-500' :
+                          index === 1 ? 'bg-gradient-to-r from-burgundy-600 to-rose-500' :
+                          index === 2 ? 'bg-gradient-to-r from-rose-500 to-rose-400' :
                           'bg-gradient-to-r from-gray-400 to-gray-500'
                         }`}>
                           {index + 1}
@@ -192,7 +192,7 @@ const Dashboard: React.FC<DashboardProps> = ({ sessions, onNavigate }) => {
               </div>
 
               {/* Recent Sessions */}
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-gray-100">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-sm border border-rose-200">
                 <h2 className="text-xl font-bold text-gray-900 mb-6">Recent Sessions</h2>
                 <div className="space-y-4 max-h-80 overflow-y-auto">
                   {recentSessions.map((session) => (

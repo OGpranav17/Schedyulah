@@ -219,24 +219,24 @@ const TimerPage: React.FC<TimerPageProps> = ({ activity, onAddSession, onNavigat
   return (
     <div className="min-h-screen flex flex-col">
       {/* Navigation */}
-      <nav className="bg-white/80 backdrop-blur-md border-b border-pink-100 px-6 py-4">
+      <nav className="bg-white/90 backdrop-blur-md border-b border-rose-200 px-6 py-4">
         <div className="max-w-4xl mx-auto flex justify-between items-center">
           <div className="flex items-center">
-            <span className="text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-mint-500 bg-clip-text text-transparent tracking-wide transform transition-all duration-300 hover:scale-110 cursor-pointer" style={{ fontFamily: 'Brush Script MT, cursive' }}>
+            <span className="text-2xl font-bold bg-gradient-to-r from-wine-800 via-burgundy-600 to-rose-500 bg-clip-text text-transparent tracking-wide transform transition-all duration-300 hover:scale-110 cursor-pointer" style={{ fontFamily: 'Brush Script MT, cursive' }}>
               Schedyulah
             </span>
           </div>
           <div className="flex items-center space-x-4">
             <button
               onClick={() => onNavigate('home')}
-              className="flex items-center space-x-2 text-gray-600 hover:text-pink-600 transition-colors"
+              className="flex items-center space-x-2 text-gray-700 hover:text-wine-700 transition-colors"
             >
               <Home className="w-5 h-5" />
               <span className="hidden sm:inline">Home</span>
             </button>
             <button
               onClick={() => onNavigate('dashboard')}
-              className="flex items-center space-x-2 text-gray-600 hover:text-pink-600 transition-colors"
+              className="flex items-center space-x-2 text-gray-700 hover:text-wine-700 transition-colors"
             >
               <BarChart3 className="w-5 h-5" />
               <span className="hidden sm:inline">Dashboard</span>
@@ -259,7 +259,7 @@ const TimerPage: React.FC<TimerPageProps> = ({ activity, onAddSession, onNavigat
               </div>
 
               {/* Timer Display */}
-              <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-pink-100 p-8 sm:p-12 mb-8">
+              <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl border border-rose-200 p-8 sm:p-12 mb-8">
                 <div className="text-6xl sm:text-7xl font-mono font-bold text-gray-900 mb-6 tracking-wider">
                   {formatTime(timerState.elapsedTime)}
                 </div>
@@ -286,15 +286,15 @@ const TimerPage: React.FC<TimerPageProps> = ({ activity, onAddSession, onNavigat
 
               {/* Stats */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-pink-100">
-                  <div className="text-2xl font-bold text-pink-600 mb-1">
+                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-rose-200">
+                  <div className="text-2xl font-bold text-wine-700 mb-1">
                     {formatTime(timerState.elapsedTime)}
                   </div>
                   <div className="text-sm text-gray-600">Active Time</div>
                 </div>
                 
-                <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-purple-100">
-                  <div className="text-2xl font-bold text-purple-600 mb-1">
+                <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-rose-200">
+                  <div className="text-2xl font-bold text-burgundy-600 mb-1">
                     {formatTime(totalSessionTime)}
                   </div>
                   <div className="text-sm text-gray-600">Total Time</div>
@@ -305,7 +305,7 @@ const TimerPage: React.FC<TimerPageProps> = ({ activity, onAddSession, onNavigat
               {(timerState.elapsedTime > 0 || totalSessionTime > 0) && (
                 <button
                   onClick={handleEndSession}
-                  className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-8 py-3 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105 font-medium"
+                  className="bg-gradient-to-r from-wine-700 to-burgundy-600 text-white px-8 py-3 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105 font-medium"
                 >
                   END SESSION
                 </button>
@@ -329,7 +329,7 @@ const TimerPage: React.FC<TimerPageProps> = ({ activity, onAddSession, onNavigat
             </>
           ) : (
             /* End Session Summary */
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-pink-100 p-8 sm:p-12">
+            <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl border border-rose-200 p-8 sm:p-12">
               <div className="text-center mb-8">
                 <div className="w-20 h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-3xl">🎉</span>
@@ -341,21 +341,21 @@ const TimerPage: React.FC<TimerPageProps> = ({ activity, onAddSession, onNavigat
               {sessionStats && (
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-pink-600 mb-2">
+                    <div className="text-3xl font-bold text-wine-700 mb-2">
                       {formatTime(sessionStats.activeTime)}
                     </div>
                     <div className="text-sm text-gray-600">Active Time</div>
                   </div>
                   
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-600 mb-2">
+                    <div className="text-3xl font-bold text-burgundy-600 mb-2">
                       {formatTime(sessionStats.totalTime)}
                     </div>
                     <div className="text-sm text-gray-600">Total Time</div>
                   </div>
                   
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-mint-600 mb-2">
+                    <div className="text-3xl font-bold text-rose-600 mb-2">
                       {sessionStats.productivity}%
                     </div>
                     <div className="text-sm text-gray-600">Productivity</div>

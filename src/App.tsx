@@ -36,7 +36,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-mint-50">
+    <div className="min-h-screen bg-gradient-to-b from-wine-900 via-burgundy-600 to-rose-300">
       {currentPage === 'home' && (
         <HomePage 
           onStartActivity={startNewActivity}
