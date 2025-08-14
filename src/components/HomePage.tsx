@@ -56,13 +56,12 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-6 sm:px-8 relative overflow-hidden">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Transform Your{' '}
-            <span className="bg-gradient-to-r from-wine-800 via-burgundy-600 to-rose-500 bg-clip-text text-transparent">
-              Productivity
+          <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-rose-200 via-pink-100 to-white bg-clip-text text-transparent">
+              Transform Your Productivity
             </span>
           </h1>
-          <p className="text-xl text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-rose-50 mb-12 max-w-2xl mx-auto leading-relaxed">
             Track your productive activities with beautiful simplicity. Perfect for students, creatives, 
             and anyone who values their time.
           </p>
@@ -88,16 +87,16 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-500">
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-rose-400 rounded-full"></div>
-              <span>Start tracking instantly</span>
+              <div className="w-2 h-2 bg-rose-200 rounded-full"></div>
+              <span className="text-rose-100">Start tracking instantly</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-burgundy-400 rounded-full"></div>
-              <span>No signup required</span>
+              <div className="w-2 h-2 bg-pink-200 rounded-full"></div>
+              <span className="text-rose-100">No signup required</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-wine-500 rounded-full"></div>
-              <span>Beautiful analytics</span>
+              <div className="w-2 h-2 bg-white rounded-full"></div>
+              <span className="text-rose-100">Beautiful analytics</span>
             </div>
           </div>
         </div>
@@ -213,7 +212,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
             </div>
 
             <div className="space-y-8">
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start space-x-4 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-r from-wine-600 to-burgundy-500 rounded-lg flex items-center justify-center">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
@@ -222,7 +221,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
                   <p className="text-gray-600">hello@schedyulah.app</p>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start space-x-4 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-r from-burgundy-600 to-rose-500 rounded-lg flex items-center justify-center">
                   <Phone className="w-5 h-5 text-white" />
                 </div>
@@ -231,7 +230,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
                   <p className="text-gray-600">+1 (555) 123-4567</p>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start space-x-4 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-r from-rose-500 to-rose-400 rounded-lg flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
