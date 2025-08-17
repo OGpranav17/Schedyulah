@@ -268,4 +268,4 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
   );
 };
 
-export default HomePage;
+export default HomePage; 

@@ -15,7 +15,7 @@ Built for people like *you* (and me 😎) who love tracking their daily grind, c
 Type in what you're working on (like *coding*, *studying*, or *manifesting your glow-up* 😌), and boom 💥 — a timer starts with your custom task name.
 
 When you're done, hit stop ⏹️, and the site calculates your **focused time** ⏱️ vs **idle time** 😴  
-You get a clear view of your *daily productivity gains* — like gym reps for your brain 🧠💪
+You get a clear view of your *daily productivity gains* — like gym reps for your brain 🧠💪 
 
 ---
 
