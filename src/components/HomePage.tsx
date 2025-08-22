@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play, Clock, TrendingUp, Users, Star, Mail, Phone, MapPin } from 'lucide-react';
+import { Play, Clock, TrendingUp, Users, Star, Mail, Phone } from 'lucide-react';
 
 interface HomePageProps {
   onStartActivity: (activity: string) => void;
@@ -164,7 +164,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
             <div>
               <form onSubmit={handleContactSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-900 mb-2">
                     Name
                   </label>
                   <input
@@ -177,7 +177,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
                     Email
                   </label>
                   <input
@@ -190,7 +190,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-2">
                     Message
                   </label>
                   <textarea
@@ -211,7 +211,7 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
               </form>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6">
               <div className="flex items-start space-x-4 mb-6">
                 <div className="w-10 h-10 bg-gradient-to-r from-wine-600 to-burgundy-500 rounded-lg flex items-center justify-center">
                   <Mail className="w-5 h-5 text-white" />
@@ -228,15 +228,6 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
                   <p className="text-gray-600">+1 (555) 123-4567</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-r from-rose-500 to-rose-400 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
-                  <p className="text-gray-600">123 Productivity Lane<br />Focus City, FC 12345</p>
                 </div>
               </div>
             </div>
@@ -268,4 +259,4 @@ const HomePage: React.FC<HomePageProps> = ({ onStartActivity, onNavigate }) => {
   );
 };
 
-export default HomePage; 
+export default HomePage;
